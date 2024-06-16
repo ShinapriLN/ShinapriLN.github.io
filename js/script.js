@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const initialDisc = allDiscs[0].querySelector('.cover');
     initialDisc.classList.add('clicked-disc');
-
-    console.log(allDiscs[2].offsetLeft);
     
 
     // Add click event listeners to each disc
