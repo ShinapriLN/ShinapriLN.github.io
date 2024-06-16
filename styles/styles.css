@@ -218,41 +218,41 @@
 }
 
 #one {
-    background-image: url(img/bg1.png);
+    background-image: url(../img/bg1.png);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #two {
-    background-image: url(img/bg2.png);
+    background-image: url(../img/bg2.png);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #three {
-    background-image: url(img/bg3.png);
+    background-image: url(../img/bg3.png);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #four {
-    background-image: url(img/bg4.png);
+    background-image: url(../img/bg4.png);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #five {
-    background-image: url(img/bg5.png);
+    background-image: url(../img/bg5.png);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #six {
-    background-image: url(img/bg6.png);
+    background-image: url(../img/bg6.png);
     display: flex;
     justify-content: center;
     align-items: center;
