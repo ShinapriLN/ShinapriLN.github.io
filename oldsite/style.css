@@ -1,0 +1,111 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #dedcde;
+}
+
+.first-container{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ontop-container {
+    background-color: #000000;
+    height: 70;
+}
+
+.ontop-container .ontop-container-rightmenu{
+    float: inline-end;
+}
+
+.ontop-container-button{
+    float: inline-start;
+}
+
+.ontop-container-button button{
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    border-radius: 0;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #dedcde;
+    background-color: #000000;
+    border: 0 #000000;
+}
+
+.ontop-container-button button:hover{
+    color: #000000;
+    background-color: #dedcde;
+    cursor: pointer;
+}
+
+.profile-container .profile-container-profile img{
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.intro-container{
+    background-color: #dedcde;
+    border-radius: 20px;
+    border: 5px #000000 solid;
+    margin: 10px;
+}
+
+.skill-container {
+    background-color: #dedcde;
+    border-radius: 20px;
+    border: 5px #000000 solid; 
+    margin: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+}
+
+.skill-container {
+    .skill-container-science{
+        background-color: #000000;
+        color: #dedcde;
+        width: 50%;
+        
+    }
+    .skill-container-mathematics{
+        background-color: #000000;
+        color: #dedcde;
+        width: 75%;
+    }
+    .skill-container-art{
+        background-color: #000000;
+        color: #dedcde;
+        width: 62%;
+    }
+    .skill-container-physics{
+        background-color: #000000;
+        color: #dedcde;
+        width: 23%;
+    }
+    .initial{
+        border: 1px solid #000000;
+        border-radius: 5px;
+    }
+}
+
+.second-container{
+    background-color: #dedcde;
+    border-radius: 20px;
+    border: 5px #000000 solid;
+    margin: 10px;
+}
+
+.second-container table{
+    border: #000000 3px solid;
+    td {
+        border: #000000 3px solid;
+    }
+}
