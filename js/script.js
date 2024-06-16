@@ -88,27 +88,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const music = new Audio();
     const song = [
         {
-            path: 'audio/Samudrartha.mp3',
+            path: '../audio/Samudrartha.mp3',
             displayName: 'Samudrartha',
         },
         {
-            path: 'audio/If I Can Stop One Heart From Breaking.mp3',
+            path: '../audio/If I Can Stop One Heart From Breaking.mp3',
             displayName: 'If I Can Stop One Heart From Breaking',
         },
         {
-            path: 'audio/Monodrama.mp3',
+            path: '../audio/Monodrama.mp3',
             displayName: 'Monodrama',
         },
         {
-            path: 'audio/Let\'s Take a Photo!.mp3',
+            path: '../audio/Let\'s Take a Photo!.mp3',
             displayName: 'Let\'s Take a Photo!',
         },
         {
-            path: 'audio/Regression.mp3',
+            path: '../audio/Regression.mp3',
             displayName: 'Regression',
         },
         {
-            path: 'audio/A Dramatic Irony.mp3',
+            path: '../audio/A Dramatic Irony.mp3',
             displayName: 'A Dramatic Irony',
         }
     ];
