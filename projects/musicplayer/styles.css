@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*font-family: "Montserrat", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font-family: "Kanit", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap');
+/*font-family: "Playwrite GB J", cursive;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.container-container {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+    background-image: url("img/bg1.jpg");
+    /* Remove filter from here */
+    z-index: -2;
+}
+
+.container-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: inherit;
+    background-position: inherit;
+    background-size: inherit;
+    background-repeat: inherit;
+    filter: blur(10px);
+    z-index: -1; /* Ensure this is below the container */
+}
+
+.container {
+    height: 60%;
+    width: 35%;
+    background-color: #fefefe;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0; /* Ensure this is on top of the blurred pseudo-element */
+    opacity: 0.7;
+    box-shadow: 0 0 15px 5px;
+    margin: 20px;
+}
+
+.container .cover {
+    height: 250px;
+    width: 250px;
+    background-image: url(img/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -20%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;   
+}
+
+.container .console {
+    height: 250px;
+    width: 350px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    user-select: none;
+}
+
+.display-title {
+    font-size: 22px;
+}
+
+.display-artist {
+    font-family: "Playwrite AU VIC", cursive;
+    font-size: 18px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 9px;
+    border-radius: 10px;
+    border: 1px solid #102010;
+    display: flex;
+    flex-direction: row;
+    padding: 1px;
+}
+
+.progress {
+    width: 0;
+    background-color: #102010;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    user-select: none;
+}
+
+.control {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+    font-size: 40px;
+}
+
+.fa-solid {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.fa-solid:hover {
+    opacity: 0.8;
+    text-shadow: 0 0 50px #9B9898;
+}
+
+.second-box {
+    display: none;
+    height: 500px;
+    width: 30%;
+    padding: 30px;
+    font-family: "Playwrite GB J", cursive;
+    overflow-y:auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.second-box::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.song-list {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    background-color: #fefefe;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.song-list:hover {
+    opacity: 0.8;
+    background-image: linear-gradient(to right, #DBDBDB 50%, rgba(0,0,0,0));
+}
+
+.cover-list + div {
+    width: 85%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-title-list {
+    font-size: 16px;
+}
+.display-artist-list {
+    font-size: 12px;
+}
+
+@media screen and (max-width:800px) {
+    .container-container {
+        flex-direction: column;
+    }
+    .container {
+        width: 100%;
+        height: 60%;
+    }
+    .second-box {
+        height: 30%;
+    }
+}

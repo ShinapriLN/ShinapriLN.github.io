@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: url('../img/image.png') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    z-index: -4;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -3;
+}
+
+.nav-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.nav-container li {
+    list-style: none;
+    margin: 0 80px;
+}
+
+.nav-container a {
+    text-decoration: none;
+}
+.nav-container p {
+    color: white;
+    font-size: 18px;
+    transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+}
+.nav-container p:hover {
+    text-shadow: 0 0 10px white;
+}
+/*/*//*/*//*/*//*/*/
+
+.project-container {
+    height: 600px;
+    margin: 0 50px;
+    position: absolute;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    
+    
+}
+
+.project-container::before {
+    border-radius: 10px;
+    position: absolute;
+    background-color: #fff;
+    content: "";
+    z-index: -1;
+    opacity: 0.75;
+    top: 0;bottom: 0;left: 0;right: 0;
+}
+
+.tools {
+    width: 60%;
+    height: 50px;
+}
+.projects {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    padding: 0 60px;
+    justify-content: center;
+}
+
+.projects::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+.project {
+    width: 250px;
+    height: auto;
+    background-color:#3C5BBB;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.65;
+    transition: 0.5s;
+}
+.cover-image {
+    width: 100%;
+    height: 200px;
+}
+.info {
+    color: #fff;
+    margin: 5px 0;
+}
+
+.project-name h4 {
+    font-size: 20px;
+}
+.project:hover {
+    opacity: 1;
+}
+#pj1 {
+    background-image: url("../projects/project-img/p1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#pj2 {
+    background-image: url("../projects/project-img/p2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#pj {
+    background-color: #fff;
+    
+}
+#pj {
+    background-color: #fff;
+}
