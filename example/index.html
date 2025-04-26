@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern UI Components - Preview</title>
+    <link rel="stylesheet" href="`styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: white;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .header {
+        text-align: center;`
+        margin-bottom: 3rem;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        background: linear-gradient(45deg, #00f2fe, #4facfe);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        color: #4facfe;
+        opacity: 0.8;
+      }
+
+      .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .preview-section {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .section-title {
+        color: #4facfe;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .button-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .card-preview {
+        display: flex;
+        justify-content: center;
+      }
+
+      .loader-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        place-items: center;
+      }
+
+      .buy-button {
+        display: block;
+        margin: 3rem auto;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        background: linear-gradient(45deg, #00f2fe, #4facfe);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .buy-button:hover {
+        transform: translateY(-2px);
+      }
+      .theme-default {
+        background-color: var(--bg-default);
+        color: var(--text-default);
+      }
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .neon-btn {
+        background: transparent;
+        color: #00ff88;
+        border: 2px solid #00ff88;
+        text-shadow: 0 0 8px #00ff88;
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+      }
+
+      .neon-btn:hover {
+        background: #00ff88;
+        color: #000;
+        box-shadow: 0 0 40px rgba(0, 255, 136, 0.6);
+      }
+      .gradient-btn {
+        background: linear-gradient(45deg, #ff6b6b, #ffc0cb);
+        color: white;
+        background-size: 200% 200%;
+      }
+
+      .gradient-btn:hover {
+        background-position: right center;
+        animation: gradientSlide 1s ease infinite;
+      }
+      .card {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        min-height: 200px;
+      }
+
+      .card-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .card i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .glass-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .glass-card .card-content {
+        color: white;
+      }
+      .loader-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+
+      .loader-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .loader-container p {
+        color: #fff;
+        font-size: 0.9rem;
+      }
+
+      .loader {
+        width: 50px;
+        height: 50px;
+        position: relative;
+      }
+      .pulse-loader {
+        background: #00ff88;
+        border-radius: 50%;
+        animation: pulse-animation 1.2s ease-in-out infinite;
+      }
+
+      @keyframes pulse-animation {
+        0% {
+          transform: scale(0.5);
+          opacity: 0.3;
+        }
+
+        50% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+
+        100% {
+          transform: scale(0.5);
+          opacity: 0.3;
+        }
+      }
+      .spinner-loader {
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        border-left-color: #4a90e2;
+        border-radius: 50%;
+        animation: spinner 1s linear infinite;
+      }
+
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .alert {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+      }
+
+      .alert.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .alert-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .alert i {
+        font-size: 1.5rem;
+      }
+      .gradient-alert {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gradient-alert .progress-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.7);
+        animation: progress 5s linear forwards;
+      }
+
+      @keyframes progress {
+        from {
+          width: 100%;
+        }
+        to {
+          width: 0%;
+        }
+      }
+      .modern-alert .alert-text {
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+
+  <body class="theme-default">
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Modern UI Components Pack</h1>
+        <p class="subtitle">
+          A collection of beautiful, responsive, and customizable UI components
+        </p>
+      </header>
+
+      <div class="preview-grid">
+        <!-- Buttons Preview -->
+        <div class="preview-section">
+          <h2 class="section-title">Buttons</h2>
+          <div class="button-grid">
+            <button class="btn neon-btn">Neon Button</button>
+            <button class="btn gradient-btn">Gradient Button</button>
+          </div>
+        </div>
+
+        <!-- Card Preview -->
+        <div class="preview-section">
+          <h2 class="section-title">Cards</h2>
+          <div class="card-preview">
+            <div class="card glass-card">
+              <div class="card-content">
+                <i class="fas fa-star"></i>
+                <h3>Premium Card</h3>
+                <p>Modern glassmorphism design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loaders Preview -->
+        <div class="preview-section">
+          <h2 class="section-title">Loaders</h2>
+          <div class="loader-grid">
+            <div class="loader pulse-loader"></div>
+            <div class="loader spinner-loader"></div>
+          </div>
+        </div>
+
+        <!-- Alert Preview -->
+        <div class="preview-section">
+          <h2 class="section-title">Alerts</h2>
+          <div class="alert gradient-alert show">
+            <div class="alert-content">
+              <i class="fas fa-info-circle"></i>
+              <span class="alert-text"
+                >Premium UI components available now!</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://codecanyon.net" class="buy-button">Get Full Package</a>
+    </div>
+  </body>
+</html>
